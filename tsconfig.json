@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "scss": [
+                "scss_mixin/scss/*"
+            ],
+            "scss_mixin": [
+                "scss_mixin/*"
+            ]
+        },
+        "outDir": "dist",
+        "rootDir": "src",
+        "target": "es6",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "sourceMap": true,
+        "jsx": "react",
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "importHelpers": true,
+        "strictNullChecks": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true,
+        "declaration": true
+    },
+    "files": [
+        "src/index.tsx"
+    ],
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "lib",
+        "dist"
+    ]
+}
