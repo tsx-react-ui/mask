@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import '~scss/_mixins';
 body.mask-show { // 移动端无效
     //   position: fixed;
     //   width: 100%;
@@ -10,9 +9,13 @@ body.mask-show { // 移动端无效
 }
 
 .lm-ui-mask {
-    @include flexbox();
-    @include justify-content(center);
-    @include align-items(center);
+    display: -webkit-box;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
