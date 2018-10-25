@@ -29,18 +29,24 @@ npm i @tsx-react-ui/mask --save
 - 待开发
 
 ### 使用
-最少配置参数为：
-- 传入`content`增加内容
+配置实例：
 
-```
-<Mask content="React test app" />
+```jsx
+<Mask visible={this.state.visible} opacity={0.3} zIndex={9} onMaskClick={() => this.setState({ visible: false })}>
+    <div>This is content</div>
+</Mask>
 
 ```
 ### 配置参数
 
 | Prop | Type | Default | Description |
 | ---- |:----:|:-------:| :----------:|
-| **`content`** | `string` | `undefined` | 主要内容 |
+| **`visible`** | `boolean` | `false` | 模态框是否可见 |
+| **`opacity`** | `number` | `0.5` | 模态框透明度 |
+| **`zIndex`** | `number` | `999` | 模态框堆叠顺序z-index |
+| **`target`** | `function | undefined` | `undefined` | 返回传送目标元素 |
+| **`className`** | `string` | `undefined` | 自定义样式名 |
+| **`onMaskClick`** | `function` | `() => { }` | 自定义模态框点击事件 |
 
 ---
 

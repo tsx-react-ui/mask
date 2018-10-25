@@ -17,7 +17,7 @@ interface MaskProps {
     visible: boolean;
     opacity: number;
     zIndex: number;
-    target?: HTMLElement;
+    target?: () => HTMLElement;
     className: string;
     style: CSSProperties;
     onMaskClick?: MouseEventHandler<HTMLDivElement>;

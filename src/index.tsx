@@ -24,7 +24,7 @@ interface MaskProps {
     visible: boolean;      //是否可见
     opacity: number;       //透明度 0-1
     zIndex: number;        //z-index
-    target?: HTMLElement;  //Protal组件 目标插入参数
+    target?: () => HTMLElement;  //传递给Protal组件 返回目标插入参数
     className: string;    //Protal组件 class 名
     style: CSSProperties;
     onMaskClick?: MouseEventHandler<HTMLDivElement>;

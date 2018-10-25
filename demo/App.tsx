@@ -40,7 +40,7 @@ export default class App extends React.Component<{}, AppStates> {
 
         const list = arr.map((item, i) => {
             return (
-                <div key={i}>{item}</div>
+                <div style={{textAlign: 'center'}} key={i}>{item}</div>
             )
         })
         return (

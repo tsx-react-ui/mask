@@ -6,10 +6,12 @@ const controlBodyScroll = (function () {
             top = window.scrollY;
             bodyEl.style.position = 'fixed';
             bodyEl.style.top = -top + 'px';
+            bodyEl.style.width = '100%';
         }
         else {
             bodyEl.style.position = '';
             bodyEl.style.top = '';
+            bodyEl.style.width = '';
             window.scrollTo(0, top); // 回到原先的top
         }
     };
