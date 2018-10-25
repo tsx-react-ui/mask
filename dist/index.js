@@ -51,17 +51,17 @@ export default class Mask extends React.Component {
         const { visible, opacity, zIndex, style, onMaskClick, children } = this.props;
         const { target, className } = this.props;
         const { inOutAnimation } = this.state;
-        const maskClass = classNames({
-            'lm-ui-mask': true,
+        const maskClass = classNames('lm-ui-mask', {
+            'lm-ui-mask-flex': !className,
             'enter-animation': visible,
             'leave-animation': !visible && inOutAnimation,
-            'hide': !visible && !inOutAnimation
-        });
+            'hide': !visible && !inOutAnimation,
+        }, className);
         const maskStyle = Object.assign({}, style, {
             backgroundColor: `rgba(0, 0, 0, ${opacity})`,
             zIndex: zIndex,
         });
-        return (React.createElement(Portal, { className: className, target: target },
+        return (React.createElement(Portal, { target: target },
             React.createElement("div", { key: "mask", onClick: onMaskClick, className: maskClass, style: maskStyle }, children)));
     }
 }

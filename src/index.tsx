@@ -97,12 +97,12 @@ export default class Mask extends React.Component<MaskProps, MaskStates> {
         const { target, className } = this.props;
         const { inOutAnimation } = this.state;
 
-        const maskClass = classNames({
-            'lm-ui-mask': true,
+        const maskClass = classNames('lm-ui-mask', {
+            'lm-ui-mask-flex': !className,
             'enter-animation': visible,   // 修改成更通用的名字，以便重写样式，默认效果为fade
             'leave-animation': !visible && inOutAnimation,
-            'hide': !visible && !inOutAnimation
-        })
+            'hide': !visible && !inOutAnimation,
+        }, className)
 
         const maskStyle = Object.assign({}, style, {
             backgroundColor: `rgba(0, 0, 0, ${opacity})`,
@@ -110,7 +110,7 @@ export default class Mask extends React.Component<MaskProps, MaskStates> {
         })
 
         return (
-            <Portal className={className} target={target}>
+            <Portal target={target}>
                 <div key="mask" onClick={onMaskClick} className={maskClass} style={maskStyle}>
 
                     {children}

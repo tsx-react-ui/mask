@@ -9,13 +9,6 @@ body.mask-show { // 移动端无效
 }
 
 .lm-ui-mask {
-    display: -webkit-box;
-	display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
@@ -24,6 +17,15 @@ body.mask-show { // 移动端无效
     z-index: 999;
     &.hide {
         display: none;
+    }
+    &-flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
     }
 }
 
