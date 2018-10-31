@@ -1,14 +1,15 @@
 {
   "name": "@tsx-react-ui/mask",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "author": {
     "name": "maqing01",
     "email": "475986855@qq.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+http://gitub.com/tsx-react-ui/mask.git"
+    "url": "git@github.com:tsx-react-ui/mask.git"
   },
+  "license": "ISC",
   "group": "tsx-react-ui",
   "type": "react",
   "keywords": [
